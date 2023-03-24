@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 
 import logo from '../logo.svg';
-import { ShoppingPage } from './02-component-patterns/pages/ShoppingPage';
+import { ShoppingPage } from '../02-component-patterns/pages/ShoppingPage';
 
 export const Navigation = () => {
   return (
