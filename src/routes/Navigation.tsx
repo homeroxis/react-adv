@@ -4,8 +4,13 @@ import {
   Route,
   NavLink
 } from 'react-router-dom';
+import { FormikBasicPage } from '../03-forms/pages/FormikBasicPage';
+import { RegisterPage } from '../03-forms/pages/RegisterPage';
+import { FormikYupPage } from '../03-forms/pages/FormikYupPage';
+import { FormikComponents } from '../03-forms/pages/FormikComponents';
 
 import logo from '../logo.svg';
+import { FormikAbstract } from '../03-forms/pages/FormikAbstract';
 
 export const Navigation = () => {
   return (
@@ -15,13 +20,19 @@ export const Navigation = () => {
             <img src={ logo } alt="React Logo" />
           <ul>
             <li>
-              <NavLink to="/" activeClassName="nav-active" exact>Home</NavLink>
+              <NavLink to="/register" activeClassName="nav-active" exact>Register</NavLink>
             </li>
             <li>
-              <NavLink to="/about" activeClassName="nav-active" exact>About</NavLink>
+              <NavLink to="/fornik-basic" activeClassName="nav-active" exact>Fornik Basic</NavLink>
             </li>
             <li>
-              <NavLink to="/users" activeClassName="nav-active" exact>Users</NavLink>
+              <NavLink to="/fornik-yup" activeClassName="nav-active" exact>Fornik Yup</NavLink>
+            </li>
+            <li>
+              <NavLink to="/fornik-components" activeClassName="nav-active" exact>Fornik Components</NavLink>
+            </li>
+            <li>
+              <NavLink to="/fornik-abstract" activeClassName="nav-active" exact>Fornik Abstract</NavLink>
             </li>
           </ul>
         </nav>
@@ -29,11 +40,20 @@ export const Navigation = () => {
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <h1>About</h1>
+          <Route path="/register">
+            <RegisterPage />
           </Route>
-          <Route path="/users">
-            <h1>Users</h1>
+          <Route path="/fornik-basic">
+            <FormikBasicPage />
+          </Route>
+          <Route path="/fornik-yup">
+            <FormikYupPage />
+          </Route>
+          <Route path="/fornik-components">
+            <FormikComponents />
+          </Route>
+          <Route path="/fornik-abstract">
+            <FormikAbstract />
           </Route>
           <Route path="/">
             <h1>Home</h1>
