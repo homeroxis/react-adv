@@ -1,0 +1,78 @@
+[
+  {
+    "type": "text",
+    "name": "firstName",
+    "placeholder": "Julieta",
+    "label": "First Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "This field is required"
+      },
+      {
+        "type": "minLength",
+        "value": 3,
+        "message": "This field must have at least 3 characters"
+      },
+      {
+        "type": "maxLength",
+        "value": 10,
+        "message": "This field must have at most 10 characters"
+      }
+    ]
+  },
+  {
+    "type": "text",
+    "name": "lastName",
+    "placeholder": "Seguel",
+    "label": "Last Name",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "This field is required"
+      },
+      {
+        "type": "email",
+        "message": "Invalid email address"
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Julieta@mail.com",
+    "label": "Email adress",
+    "value": ""
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      {
+        "id": 1,
+        "label": "Select a game",
+        "value": ""
+      },
+      {
+        "id": 2,
+        "label": "League of Legends",
+        "value": "lol"
+      },
+      {
+        "id": 3,
+        "label": "Counter Strike",
+        "value": "cs"
+      },
+      {
+        "id": 4,
+        "label": "Dota 2",
+        "value": "dota"
+      }
+    ]
+  }
+
+]
